@@ -12,7 +12,13 @@
 </template>
   
 <script>
-export default{};
+export default{
+    /*login() {
+        if (this.input.correu != "" && this.input.contrasenya != "") {
+            
+        }
+    }*/
+};
 </script>
 
 <style scoped>
