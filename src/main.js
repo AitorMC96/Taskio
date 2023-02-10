@@ -1,22 +1,9 @@
-import { createApp } from 'vue';
-import Vue from 'vue';
-import Router from 'vue-router';
-import App from './App';
+import { createApp } from 'vue'
+import App from './App.vue';
+import router from './router';
+import axios from 'axios';
 
-import Home from './views/HomeView.vue';
-import Login from './views/LoginView.vue';
-import Registre from './views/RegistreView.vue';
-
-Vue.use(Router);
-
-const rutes = [
-    { path: "/", component: Home },
-    { path: "/login", component: Login },
-    { path: "/registre", component: Registre }
-];
-
-const router = new Router({
-    rutes
-})
-
-createApp(App).use(router).mount('#app')
+const app = createApp(App)
+app.use(router)
+app.use(axios)
+app.mount('#app')
